@@ -3,146 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Egsey | Developer</title>
+    <title>Egsey | 创造者</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
-    <!-- 动态背景 -->
-    <canvas id="bg"></canvas>
+    <!-- 宇宙星系背景 -->
+    <canvas id="universe"></canvas>
+    <div class="star-field"></div>
+    
+    <!-- 扫描线效果 -->
+    <div class="scanlines"></div>
     
     <!-- 导航 -->
     <nav class="nav">
-        <div class="nav-logo">Egsey</div>
-        <div class="nav-links">
-            <a href="#work">Work</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+        <div class="nav-brand">
+            <span class="logo-icon">◉</span>
+            <span class="logo-text">EGSEY</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#hero" data-text="首页">首页</a></li>
+            <li><a href="#about" data-text="关于">关于</a></li>
+            <li><a href="#works" data-text="作品">作品</a></li>
+            <li><a href="#contact" data-text="联系">联系</a></li>
+        </ul>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </nav>
 
-    <!-- 主视觉 -->
-    <main class="hero">
+    <!-- 主视觉区 -->
+    <section id="hero" class="hero">
         <div class="hero-content">
-            <p class="hero-label">Developer & Creator</p>
+            <div class="hero-badge">
+                <span class="badge-pulse"></span>
+                <span class="badge-text">系统在线</span>
+            </div>
+            
             <h1 class="hero-title">
-                <span class="glitch" data-text="Egsey">Egsey</span>
+                <span class="title-line">创造</span>
+                <span class="title-line title-highlight">
+                    <span class="glitch-text" data-text="数字宇宙">数字宇宙</span>
+                </span>
             </h1>
-            <p class="hero-desc">Building digital experiences with code</p>
-            <div class="hero-cta">
-                <a href="#work" class="btn btn-primary">View Work</a>
-                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            
+            <p class="hero-subtitle">
+                我是 <strong>Egsey</strong>，一名数字创造者<br>
+                在代码与设计的边界探索无限可能
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value" data-count="3">0</span>
+                    <span class="stat-unit">年经验</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-value" data-count="50">0</span>
+                    <span class="stat-unit">个项目</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-value" data-count="999">0</span>
+                    <span class="stat-unit">杯咖啡</span>
+                </div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#works" class="btn btn-glow">
+                    <span class="btn-text">探索作品</span>
+                    <span class="btn-icon">→</span>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span class="btn-text">建立连接</span>
+                </a>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <span></span>
-        </div>
-    </main>
 
-    <!-- 作品区 -->
-    <section id="work" class="section">
-        <div class="container">
-            <h2 class="section-title">Selected Work</h2>
-            <div class="work-grid">
-                <article class="work-card">
-                    <div class="work-card-bg"></div>
-                    <span class="work-card-num">01</span>
-                    <h3>Personal Site</h3>
-                    <p>Minimalist portfolio built with vanilla JS</p>
-                    <div class="work-card-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
+        <div class="scroll-hint">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span class="scroll-text">向下滚动</span>
+        </div>
+
+        <!-- 装饰元素 -->
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="orbit orbit-3"></div>
+    </section>
+
+    <!-- 关于区域 -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <span class="section-num">01</span>
+            <h2 class="section-title">关于我</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-visual">
+                <div class="hologram-card">
+                    <div class="hologram-content">
+                        <div class="avatar-ring">
+                            <div class="avatar-center">E</div>
+                        </div>
+                        <div class="hologram-data">
+                            <div class="data-row">
+                                <span>身份</span>
+                                <span>全栈开发者</span>
+                            </div>
+                            <div class="data-row">
+                                <span>坐标</span>
+                                <span>地球·中国</span>
+                            </div>
+                            <div class="data-row">
+                                <span>状态</span>
+                                <span class="status-active">● 接受委托</span>
+                            </div>
+                        </div>
                     </div>
-                </article>
+                    <div class="hologram-grid"></div>
+                </div>
+            </div>
+
+            <div class="about-text">
+                <p class="about-lead">
+                    我相信代码是<span class="text-glow">现代魔法</span>，每一行都在构建未来的形状。
+                </p>
+                <p class="about-desc">
+                    从像素到交互，从前端到后端，我致力于创造既美观又实用的数字体验。
+                    在这个信息爆炸的时代，极简与高效是我的设计哲学。
+                </p>
                 
-                <article class="work-card">
-                    <div class="work-card-bg"></div>
-                    <span class="work-card-num">02</span>
-                    <h3>Task Manager</h3>
-                    <p>Productivity app with local storage</p>
-                    <div class="work-card-tags">
-                        <span>React</span>
-                        <span>Node.js</span>
+                <div class="skill-orbit">
+                    <h3 class="skill-title">技能星系</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" style="--delay:0s">JavaScript</span>
+                        <span class="skill-tag" style="--delay:0.1s">React</span>
+                        <span class="skill-tag" style="--delay:0.2s">Node.js</span>
+                        <span class="skill-tag" style="--delay:0.3s">Python</span>
+                        <span class="skill-tag" style="--delay:0.4s">UI设计</span>
+                        <span class="skill-tag" style="--delay:0.5s">Three.js</span>
+                        <span class="skill-tag" style="--delay:0.6s">WebGL</span>
+                        <span class="skill-tag" style="--delay:0.7s">AI应用</span>
                     </div>
-                </article>
-                
-                <article class="work-card">
-                    <div class="work-card-bg"></div>
-                    <span class="work-card-num">03</span>
-                    <h3>Design System</h3>
-                    <p>Component library for rapid prototyping</p>
-                    <div class="work-card-tags">
-                        <span>Figma</span>
-                        <span>UI/UX</span>
-                    </div>
-                </article>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 关于 -->
-    <section id="about" class="section section-dark">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <h2 class="section-title">About</h2>
-                    <p class="about-text">
-                        I'm Egsey, a developer focused on creating clean, 
-                        functional digital experiences. I believe in the 
-                        power of minimalism and thoughtful design.
-                    </p>
-                    <div class="skills">
-                        <div class="skill">
-                            <span class="skill-name">Frontend</span>
-                            <div class="skill-bar"><div style="width: 90%"></div></div>
-                        </div>
-                        <div class="skill">
-                            <span class="skill-name">Backend</span>
-                            <div class="skill-bar"><div style="width: 75%"></div></div>
-                        </div>
-                        <div class="skill">
-                            <span class="skill-name">Design</span>
-                            <div class="skill-bar"><div style="width: 85%"></div></div>
-                        </div>
+    <!-- 作品展示 -->
+    <section id="works" class="works">
+        <div class="section-header">
+            <span class="section-num">02</span>
+            <h2 class="section-title">精选作品</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="works-container">
+            <article class="work-item" data-index="01">
+                <div class="work-visual">
+                    <div class="work-icon">◈</div>
+                    <div class="work-particles"></div>
+                </div>
+                <div class="work-info">
+                    <span class="work-category">Web应用</span>
+                    <h3 class="work-title">星云数据平台</h3>
+                    <p class="work-desc">实时数据可视化仪表盘，支持百万级数据渲染</p>
+                    <div class="work-tech">
+                        <span>Vue3</span>
+                        <span>D3.js</span>
+                        <span>WebSocket</span>
                     </div>
                 </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <span class="stat-num" data-target="3">0</span>
-                        <span class="stat-label">Years Exp</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-num" data-target="12">0</span>
-                        <span class="stat-label">Projects</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-num" data-target="100">0</span>
-                        <span class="stat-label">Commits</span>
+                <div class="work-arrow">↗</div>
+            </article>
+
+            <article class="work-item" data-index="02">
+                <div class="work-visual">
+                    <div class="work-icon">◉</div>
+                    <div class="work-particles"></div>
+                </div>
+                <div class="work-info">
+                    <span class="work-category">移动应用</span>
+                    <h3 class="work-title">量子笔记</h3>
+                    <p class="work-desc">AI驱动的知识管理工具，支持语音转文字与智能分类</p>
+                    <div class="work-tech">
+                        <span>React Native</span>
+                        <span>TensorFlow</span>
+                        <span>Firebase</span>
                     </div>
                 </div>
-            </div>
+                <div class="work-arrow">↗</div>
+            </article>
+
+            <article class="work-item" data-index="03">
+                <div class="work-visual">
+                    <div class="work-icon">◆</div>
+                    <div class="work-particles"></div>
+                </div>
+                <div class="work-info">
+                    <span class="work-category">创意编程</span>
+                    <h3 class="work-title">生成艺术引擎</h3>
+                    <p class="work-desc">基于算法生成独特视觉作品，每件都是独一无二</p>
+                    <div class="work-tech">
+                        <span>Three.js</span>
+                        <span>GLSL</span>
+                        <span>Canvas</span>
+                    </div>
+                </div>
+                <div class="work-arrow">↗</div>
+            </article>
         </div>
     </section>
 
-    <!-- 联系 -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
+    <!-- 联系区域 -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <span class="section-num">03</span>
+            <h2 class="section-title">建立连接</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-visual">
+                <div class="signal-ring"></div>
+                <div class="signal-ring"></div>
+                <div class="signal-ring"></div>
+                <div class="signal-core">📡</div>
+            </div>
+
             <div class="contact-content">
-                <p class="contact-text">Have a project in mind? Let's work together.</p>
-                <a href="mailto:hello@egsey.dev" class="contact-email">hello@egsey.dev</a>
-                <div class="social-links">
-                    <a href="#" class="social-link">GitHub</a>
-                    <a href="#" class="social-link">Twitter</a>
-                    <a href="#" class="social-link">LinkedIn</a>
+                <p class="contact-lead">准备好开始下一个项目了吗？</p>
+                <p class="contact-sub">无论是全新创意还是现有项目优化，我都能助你一臂之力</p>
+                
+                <a href="mailto:hello@egsey.dev" class="contact-email">
+                    <span class="email-label">发送信号至</span>
+                    <span class="email-address">hello@egsey.dev</span>
+                </a>
+
+                <div class="social-grid">
+                    <a href="#" class="social-item">
+                        <span class="social-icon">⚡</span>
+                        <span class="social-name">GitHub</span>
+                    </a>
+                    <a href="#" class="social-item">
+                        <span class="social-icon">◉</span>
+                        <span class="social-name">Twitter</span>
+                    </a>
+                    <a href="#" class="social-item">
+                        <span class="social-icon">◈</span>
+                        <span class="social-name">微信</span>
+                    </a>
+                    <a href="#" class="social-item">
+                        <span class="social-icon">◆</span>
+                        <span class="social-name">知乎</span>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- 页脚 -->
     <footer class="footer">
-        <p>&copy; 2024 Egsey. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-icon">◉</span>
+                <span>EGSEY</span>
+            </div>
+            <p class="footer-text">在数字宇宙中留下印记</p>
+            <div class="footer-meta">
+                <span>© 2024</span>
+                <span class="divider">|</span>
+                <span>系统运行正常</span>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
